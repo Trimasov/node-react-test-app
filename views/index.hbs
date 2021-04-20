@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="bg-success">{{ info }}</p>
+            <input type="text" id="searchFilms" class="form-control" onkeyup="searchFilms(this)" placeholder="Search for names..">
+            <p id="search-errors" class="text-danger"></p>
+            <br />
+            <p><i>{{ count }} films found</i></p>
+            <br />
+            <table id="films" class="table">
+                <thead>
+                    <tr class="header">
+                        <th style="width:60%;">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each models}}
+                        <tr>
+                            <td>{{ name }}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
